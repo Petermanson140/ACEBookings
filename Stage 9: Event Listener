@@ -1,0 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const searchButton = document.getElementById("searchButton");
+
+  searchButton.addEventListener("click", function () {
+    const SurfaceDropdown = document.getElementById("Surface");
+    const Surface = SurfaceDropdown.value;
+
+    if (Surface === "Clay") {
+      fetchLakewoodTennisClubData(Surface);
+    } else {
+      alert("Please select Clay to start the search");
+    }
+  });
