@@ -1,0 +1,44 @@
+const fetchLakewoodTennisClubData = async (Surface) => {
+    try {
+      const response = await fetch(
+        `LakewoodTennisClubFetch.java?surface=${Surface}`
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok.");
+      }
+      const data = await response.json();
+      displayLakewoodTennisClubData(data);
+    } catch (error) {
+      console.error("There was a problem with the fetch operation:", error);
+    }
+  };
+
+  function displayLakewoodTennisClubData(data) {
+    const dataContainer = document.getElementById("DataContainer");
+    dataContainer.innerHTML = "";
+
+    if (Array.isArray(data)) {
+      data.forEach((club) => {
+        dataContainer.innerHTML += `
+          <p>Clubname: ${club.Clubname}</p>
+          <p>Location: ${club.Location}</p>
+          <p>Numberofcourts: ${club.Numberofcourts}</p>
+          <p>Courtnumber: ${club.Courtnumber}</p>
+          <p>Surface: ${club.Surface}</p>
+          <p>Availability: ${club.Availability}</p>
+          <hr>
+        `;
+      });
+    } else {
+      dataContainer.innerHTML += `
+        <p>Clubname: ${data.Clubname}</p>
+        <p>Location: ${data.Location}</p>
+        <p>Numberofcourts: ${data.Numberofcourts}</p>
+        <p>Courtnumber: ${data.Courtnumber}</p>
+        <p>Surface: ${data.Surface}</p>
+        <p>Availability: ${data.Availability}</p>
+        <hr>
+      `;
+    }
+  }
+});
