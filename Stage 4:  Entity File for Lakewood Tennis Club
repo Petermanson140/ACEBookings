@@ -1,0 +1,90 @@
+package com.example.myapp.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class LakewoodTennisClub {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    private String Clubname;
+    private String Location;
+    private Integer Numberofcourts;
+    private Integer Courtnumber;
+    private String Surface;
+    private String Availability;
+
+    public LakewoodTennisClub() {
+    }
+
+    public LakewoodTennisClub(String Clubname, String Location, Integer Numberofcourts, Integer Courtnumber,
+            String Surface, String Availability) {
+        this.Clubname = Clubname;
+        this.Location = Location;
+        this.Numberofcourts = Numberofcourts;
+        this.Courtnumber = Courtnumber;
+        this.Surface = Surface;
+        this.Availability = Availability;
+    }
+
+    public Integer getid() {
+        return id;
+    }
+
+    public void setid(Integer id) {
+        this.id = id;
+    }
+
+    public String getClubname() {
+        return Clubname;
+    }
+
+    public void setClubname(String Clubname) {
+        this.Clubname = Clubname;
+    }
+
+    public String getLocation() {
+        return Location;
+    }
+
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
+    public Integer getNumberofcourts() {
+        return Numberofcourts;
+    }
+
+    public void setNumberofcourts(Integer Numberofcourts) {
+        this.Numberofcourts = Numberofcourts;
+    }
+
+    public Integer getCourtnumber() {
+        return Courtnumber;
+    }
+
+    public void setCourtnumber(Integer Courtnumber) {
+        this.Courtnumber = Courtnumber;
+    }
+
+    public String getSurface() {
+        return Surface;
+    }
+
+    public void setSurface(String Surface) {
+        this.Surface = Surface;
+    }
+
+    public String getAvailability() {
+        return Availability;
+    }
+
+    public void setAvailability(String Availability) {
+        this.Availability = Availability;
+    }
+}
