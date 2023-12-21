@@ -1,0 +1,23 @@
+package com.example.myapp.services;
+
+import com.example.myapp.model.LakewoodTennisClub;
+import com.example.myapp.repositories.LakewoodTennisClubRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class LakewoodTennisClubService {
+
+    private final LakewoodTennisClubRepository LakewoodTennisClubRepository;
+
+    @Autowired
+    public LakewoodTennisClubService(LakewoodTennisClubRepository LakewoodTennisClubRepository) {
+        this.LakewoodTennisClubRepository = LakewoodTennisClubRepository;
+    }
+
+    public List<LakewoodTennisClub> fetchLakewoodTennisClubData(String Surface) {
+        return LakewoodTennisClubRepository.findBySurface(Surface);
+    }
+}
