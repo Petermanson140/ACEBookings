@@ -1,22 +1,24 @@
+//Import the necessary modules/libraries 
 package com.example.myapp.services;
 
+//Import classes
+import java.util.List;
 import com.example.myapp.model.LakewoodTennisClub;
 import com.example.myapp.repositories.LakewoodTennisClubRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.List;
-
+//@Annotations for Service and Autowired
 @Service
 public class LakewoodTennisClubService {
-
+//Declare final variable for the tennis club
     private final LakewoodTennisClubRepository LakewoodTennisClubRepository;
-
+//constructor for the tennis club repository dependency
     @Autowired
     public LakewoodTennisClubService(LakewoodTennisClubRepository LakewoodTennisClubRepository) {
         this.LakewoodTennisClubRepository = LakewoodTennisClubRepository;
     }
-
+//Method to fetch the tennis club data based on the surface
     public List<LakewoodTennisClub> fetchLakewoodTennisClubData(String Surface) {
         return LakewoodTennisClubRepository.findBySurface(Surface);
     }
