@@ -1,10 +1,14 @@
+//Wait for the DOM content to have loaded before processing the code
 document.addEventListener("DOMContentLoaded", function () {
+//Get search button by the id
   const searchButton = document.getElementById("searchButton");
-
+//add a click listener event to the search button
   searchButton.addEventListener("click", function () {
+//Get the surface dropdown option by its id
     const SurfaceDropdown = document.getElementById("Surface");
+//get the exact surface from the dropdown list
     const Surface = SurfaceDropdown.value;
-
+//checks if the surface is clay or not clay and a message will appear if it is not
     if (Surface === "Clay") {
       fetchLakewoodTennisClubData(Surface);
     } else {
