@@ -1,22 +1,27 @@
+//fetches the data about the tennis club by surface from the server called ACEBookings 
 const fetchLakewoodTennisClubData = async (Surface) => {
     try {
+//sends a request to the server to go get the data from the tennis club
       const response = await fetch(
         `LakewoodTennisClubFetch.java?surface=${Surface}`
       );
+//checks if the response is successful
       if (!response.ok) {
-        throw new Error("Network response was not ok.");
+        throw new Error("Response failed.");
       }
+//pass the response as JSON which is part of Java
       const data = await response.json();
       displayLakewoodTennisClubData(data);
     } catch (error) {
-      console.error("There was a problem with the fetch operation:", error);
+//if there is an error, it will og the error
+      console.error("There was a problem with fetching the data, error);
     }
   };
-
+//displays the tennis club data on the html page 
   function displayLakewoodTennisClubData(data) {
     const dataContainer = document.getElementById("DataContainer");
     dataContainer.innerHTML = "";
-
+//checks if the data is an array of tennis clubs and if it is, it will go throuhg each club and display all the information for below
     if (Array.isArray(data)) {
       data.forEach((club) => {
         dataContainer.innerHTML += `
@@ -30,6 +35,7 @@ const fetchLakewoodTennisClubData = async (Surface) => {
         `;
       });
     } else {
+// if the data is only one club, it will display all the information below about that club 
       dataContainer.innerHTML += `
         <p>Clubname: ${data.Clubname}</p>
         <p>Location: ${data.Location}</p>
