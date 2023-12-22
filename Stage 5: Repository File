@@ -1,12 +1,15 @@
+//Import the necessary modules/libraries 
 package com.example.myapp.repositories;
 
+//Import classes
 import com.example.myapp.model.LakewoodTennisClub;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
 import java.util.List;
+import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
+//Annotation for defining the interface
 @Repository
+// Method to find the tennis club
 public interface LakewoodTennisClubRepository extends JpaRepository<LakewoodTennisClub, Integer> {
     List<LakewoodTennisClub> findBySurface(String Surface);
 }
