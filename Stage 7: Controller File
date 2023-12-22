@@ -1,23 +1,31 @@
+//Import the necessary modules/libraries 
 package com.example.myapp.controller;
 
+//import the classes
+import java.util.List;
 import com.example.myapp.services.LakewoodTennisClubService;
 import com.example.myapp.model.LakewoodTennisClub;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+//@annotations for Rest controller, Request mapping, get mapping and request param
 @RestController
+// Define the request being made
 @RequestMapping("/api/LakewoodTennisClub")
+// Define the class of the controller
 public class LakewoodTennisClubController {
-
+    // Define the final variable for the tennis club service
     private final LakewoodTennisClubService LakewoodTennisClubService;
 
+    // constructor for the tennis club service
     public LakewoodTennisClubController(LakewoodTennisClubService LakewoodTennisClubService) {
         this.LakewoodTennisClubService = LakewoodTennisClubService;
     }
 
+    // End point to handle the GET request being made to retrieve the tennis club
+    // data by surface type
     @GetMapping
     public List<LakewoodTennisClub> getLakewoodTennisClubBySurface(@RequestParam String Surface) {
         return LakewoodTennisClubService.fetchLakewoodTennisClubData(Surface);
