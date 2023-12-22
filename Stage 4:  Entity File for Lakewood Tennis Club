@@ -87,6 +87,7 @@ public class LakewoodTennisClub {
     public String getAvailability() {
         return Availability;
     }
+}
 
     public void setAvailability(String Availability) {
         this.Availability = Availability;
