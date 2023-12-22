@@ -1,16 +1,20 @@
+//Import relevent modules/libraries
 package com.example.myapp.model;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+//Import classes
 import javax.persistence.Id;
+import javax.persistence.GenerationType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Entity;
 
+//@Annoations for entity, id and GeneratedValue
 @Entity
+//define class to public
 public class LakewoodTennisClub {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Id //PK
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //id is being generated as pk
+    //declare the variables
+    private Integer id;//define as PK
 
     private String Clubname;
     private String Location;
@@ -19,9 +23,7 @@ public class LakewoodTennisClub {
     private String Surface;
     private String Availability;
 
-    public LakewoodTennisClub() {
-    }
-
+    //Constructor for LakewoodTennisClub
     public LakewoodTennisClub(String Clubname, String Location, Integer Numberofcourts, Integer Courtnumber,
             String Surface, String Availability) {
         this.Clubname = Clubname;
@@ -31,6 +33,8 @@ public class LakewoodTennisClub {
         this.Surface = Surface;
         this.Availability = Availability;
     }
+
+//getters and setters for the variables 
 
     public Integer getid() {
         return id;
