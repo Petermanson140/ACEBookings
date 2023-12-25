@@ -14,14 +14,14 @@ public class LakewoodTennisClub {
     @Id //PK
     @GeneratedValue(strategy = GenerationType.IDENTITY) //id is being generated as pk
     //declare the variables
-    private Integer id;//define as PK
+    private Int id;//define as PK
 
-    private String Clubname;
-    private String Location;
-    private Integer Numberofcourts;
-    private Integer Courtnumber;
-    private String Surface;
-    private String Availability;
+    private Str Clubname;
+    private Str Location;
+    private Int Numberofcourts;
+    private Int Courtnumber;
+    private Str Surface;
+    private Str Availability;
 
     //Constructor for LakewoodTennisClub
     public LakewoodTennisClub(String Clubname, String Location, Integer Numberofcourts, Integer Courtnumber,
