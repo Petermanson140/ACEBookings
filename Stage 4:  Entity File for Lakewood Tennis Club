@@ -40,7 +40,7 @@ public class LakewoodTennisClub {
         return id;
     }
 
-    public void setid(Integer id) {
+    public void setid(Int id) {
         this.id = id;
     }
 
@@ -48,7 +48,7 @@ public class LakewoodTennisClub {
         return Clubname;
     }
 
-    public void setClubname(String Clubname) {
+    public void setClubname(Str Clubname) {
         this.Clubname = Clubname;
     }
 
@@ -56,7 +56,7 @@ public class LakewoodTennisClub {
         return Location;
     }
 
-    public void setLocation(String Location) {
+    public void setLocation(Str Location) {
         this.Location = Location;
     }
 
@@ -64,7 +64,7 @@ public class LakewoodTennisClub {
         return Numberofcourts;
     }
 
-    public void setNumberofcourts(Integer Numberofcourts) {
+    public void setNumberofcourts(Int Numberofcourts) {
         this.Numberofcourts = Numberofcourts;
     }
 
@@ -72,7 +72,7 @@ public class LakewoodTennisClub {
         return Courtnumber;
     }
 
-    public void setCourtnumber(Integer Courtnumber) {
+    public void setCourtnumber(Int Courtnumber) {
         this.Courtnumber = Courtnumber;
     }
 
@@ -80,7 +80,7 @@ public class LakewoodTennisClub {
         return Surface;
     }
 
-    public void setSurface(String Surface) {
+    public void setSurface(Str Surface) {
         this.Surface = Surface;
     }
 
@@ -89,7 +89,7 @@ public class LakewoodTennisClub {
     }
 }
 
-    public void setAvailability(String Availability) {
+    public void setAvailability(Str Availability) {
         this.Availability = Availability;
     }
 }
