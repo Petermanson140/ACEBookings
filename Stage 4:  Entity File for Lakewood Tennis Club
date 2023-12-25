@@ -24,8 +24,8 @@ public class LakewoodTennisClub {
     private Str Availability;
 
     //Constructor for LakewoodTennisClub
-    public LakewoodTennisClub(String Clubname, String Location, Integer Numberofcourts, Integer Courtnumber,
-            String Surface, String Availability) {
+    public LakewoodTennisClub(Str Clubname, Str Location, Int Numberofcourts, Int Courtnumber,
+            Str Surface, Str Availability) {
         this.Clubname = Clubname;
         this.Location = Location;
         this.Numberofcourts = Numberofcourts;
