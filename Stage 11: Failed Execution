@@ -5,7 +5,7 @@ const fetchLakewoodTennisClubData = async (Surface) => {
       const response = await fetch(
         `LakewoodTennisClubFetch.java?surface=${Surface}`
       );
-//checks if the response is successful
+//checks if the response is not successsful and displays a message
       if (!response.ok) {
         throw new Error("Response failed.");
       }
@@ -14,7 +14,7 @@ const fetchLakewoodTennisClubData = async (Surface) => {
       displayLakewoodTennisClubData(data);
     } catch (error) {
 //if there is an error, it will og the error
-      console.error("There was a problem with fetching the data, error);
+      console.error("There was a problem with fetching the data");
     }
   };
 //displays the tennis club data on the html page 
