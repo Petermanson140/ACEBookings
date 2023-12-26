@@ -16,16 +16,16 @@ public class LakewoodTennisClub {
     //declare the variables
     private Int id;//define as PK
 
-    private Str Clubname;
-    private Str Location;
-    private Int Numberofcourts;
-    private Int Courtnumber;
-    private Str Surface;
-    private Str Availability;
+    private String Clubname;
+    private String Location;
+    private Integer Numberofcourts;
+    private Integer Courtnumber;
+    private String Surface;
+    private String Availability;
 
     //Constructor for LakewoodTennisClub
-    public LakewoodTennisClub(Str Clubname, Str Location, Int Numberofcourts, Int Courtnumber,
-            Str Surface, Str Availability) {
+    public LakewoodTennisClub(String Clubname, String Location, Integer Numberofcourts, Integer Courtnumber,
+            String Surface, String Availability) {
         this.Clubname = Clubname;
         this.Location = Location;
         this.Numberofcourts = Numberofcourts;
