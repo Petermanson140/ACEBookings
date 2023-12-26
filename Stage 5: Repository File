@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 //Annotation for defining the interface
 @Repository
-// Method to find the tennis club
+// Method to find the tennis club by the surface of the court
 public interface LakewoodTennisClubRepository extends JpaRepository<LakewoodTennisClub, Integer> {
     List<LakewoodTennisClub> findBySurface(String Surface);
 }
