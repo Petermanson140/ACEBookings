@@ -1,7 +1,7 @@
 //fetches the data about the tennis club by surface from the server called ACEBookings 
 const fetchLakewoodTennisClubData = async (Surface) => {
     try {
-//sends a request to the server to go get the data from the tennis club
+//sends a request to the server to go get the data from the tennis club table
       const response = await fetch(
         `LakewoodTennisClubFetch.java?surface=${Surface}`
       );
@@ -9,11 +9,11 @@ const fetchLakewoodTennisClubData = async (Surface) => {
       if (!response.ok) {
         throw new Error("Response failed.");
       }
-//pass the response as JSON which is part of Java
+//passes the response as JSON which is part of Java
       const data = await response.json();
       displayLakewoodTennisClubData(data);
     } catch (error) {
-//if there is an error, it will og the error
+//if there is an error, it will log it and display a message 
       console.error("There was a problem with fetching the data");
     }
   };
