@@ -19,13 +19,12 @@ public class LakewoodTennisClubController {
     // Define the final variable for the tennis club service
     private final LakewoodTennisClubService LakewoodTennisClubService;
 
-    // constructor for the tennis club service
+    // constructor for the LakeWoodTennisClub Service
     public LakewoodTennisClubController(LakewoodTennisClubService LakewoodTennisClubService) {
         this.LakewoodTennisClubService = LakewoodTennisClubService;
     }
 
-    // End point to handle the GET request being made to retrieve the tennis club
-    // data by surface type
+    // End point to handle the GET request being made to retrieve the tennis clubdata by surface type
     @GetMapping
     public List<LakewoodTennisClub> getLakewoodTennisClubBySurface(@RequestParam String Surface) {
         return LakewoodTennisClubService.fetchLakewoodTennisClubData(Surface);
