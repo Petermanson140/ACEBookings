@@ -21,7 +21,7 @@ const fetchLakewoodTennisClubData = async (Surface) => {
   function displayLakewoodTennisClubData(data) {
     const dataContainer = document.getElementById("DataContainer");
     dataContainer.innerHTML = "";
-//checks if the data is an array of tennis clubs and if it is, it will go throuhg each club and display all the information for below
+//checks if the data is an array of tennis clubs and if it is, it will go through each club and display all the information for below
     if (Array.isArray(data)) {
       data.forEach((club) => {
         dataContainer.innerHTML += `
