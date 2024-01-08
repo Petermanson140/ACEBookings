@@ -1,11 +1,11 @@
-//fetches the data about the tennis club by surface from the server called ACEBookings 
+//fetches the data about the tennis club table by the surface from the database and server called ACEBookings on PostgreSQL 
 const fetchLakewoodTennisClubData = async (Surface) => {
     try {
-//sends a request to the server to go get the data from the tennis club table
+//sends a request to the server to go get the data from the tennis club table in the database
       const response = await fetch(
         `LakewoodTennisClubFetch.java?surface=${Surface}`
       );
-//checks if the response is not successsful and displays a message
+//checks if the response to the server/database is not successsful and displays a message
       if (!response.ok) {
         throw new Error("Response failed.");
       }
@@ -17,11 +17,11 @@ const fetchLakewoodTennisClubData = async (Surface) => {
       console.error("There was a problem with fetching the data");
     }
   };
-//displays the tennis club data on the html page 
+//displays the tennis club data on the html page inside the data container
   function displayLakewoodTennisClubData(data) {
     const dataContainer = document.getElementById("DataContainer");
     dataContainer.innerHTML = "";
-//checks if the data is an array of tennis clubs and if it is, it will go through each club and display all the information for below
+//checks if the data in the database is an array of tennis clubs and if it is, it will go through each club and display all the information for below
     if (Array.isArray(data)) {
       data.forEach((club) => {
         dataContainer.innerHTML += `
@@ -35,7 +35,7 @@ const fetchLakewoodTennisClubData = async (Surface) => {
         `;
       });
     } else {
-// if the data is only one club, it will display all the information below about that club 
+// if the data in the database is only one club, it will display all the information below about that club 
       dataContainer.innerHTML += `
         <p>Clubname: ${data.Clubname}</p>
         <p>Location: ${data.Location}</p>
